@@ -161,22 +161,43 @@ section{border-top:1px solid var(--line)}
 }
 .band p.big strong{font-style:normal;font-weight:600;color:var(--moss)}
 
-/* testimonials */
-.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-.tcard{
-  border:1px solid var(--line);padding:2rem 2rem 1.7rem;background:#F5F4EF;
+/* testimonial carousel */
+.carousel{margin-top:3rem;overflow:hidden}
+.carousel-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.carousel .slide{
+  flex:0 0 100%;min-width:100%;
+  padding:.5rem 0;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
 }
-.tcard .quote-mark{
-  font-family:'Fraunces',serif;font-size:2.4rem;line-height:1;color:var(--sun);
-  display:block;margin-bottom:.6rem;
+.carousel .quote-mark{
+  font-family:'Fraunces',serif;font-size:3.2rem;line-height:1;color:var(--sun);
+  display:block;margin-bottom:.4rem;
 }
-.tcard p{font-size:.93rem;color:#3A463F}
-.tcard p+p{margin-top:.8em}
-.tcard .who{
-  margin-top:1.2rem;font-size:.8rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--moss);font-weight:600;
+.carousel blockquote{
+  max-width:42em;font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.6;color:var(--ink);
 }
-@media(max-width:760px){.testimonials{grid-template-columns:1fr}}
+.carousel blockquote p+p{margin-top:.9em}
+.carousel figcaption{
+  margin-top:1.6rem;font-family:'Karla',sans-serif;font-size:.8rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--moss);font-weight:600;
+}
+.carousel-controls{
+  display:flex;align-items:center;justify-content:center;gap:1.5rem;
+  margin-top:2.5rem;
+}
+.c-arrow{
+  width:44px;height:44px;border-radius:999px;border:1px solid var(--line);
+  background:transparent;color:var(--ink);font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .25s;
+}
+.c-arrow:hover,.c-arrow:focus-visible{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.c-dots{display:flex;gap:.6rem}
+.c-dot{
+  width:8px;height:8px;border-radius:999px;border:none;padding:0;cursor:pointer;
+  background:var(--line);transition:all .25s;
+}
+.c-dot[aria-selected="true"]{background:var(--sun);transform:scale(1.4)}
 
 /* info cards (soul recharge page) */
 .cards2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
