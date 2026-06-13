@@ -49,6 +49,18 @@ nav.links a{
   transition:color .25s;
 }
 nav.links a:hover,nav.links a:focus-visible,nav.links a[aria-current]{color:var(--ink)}
+
+/* language switcher */
+.lang-switch{
+  display:inline-flex;align-items:center;gap:.4rem;
+  margin-left:.4rem;font-size:.8rem;letter-spacing:.08em;
+}
+.lang-switch a{
+  text-decoration:none;color:var(--stone);text-transform:uppercase;
+  padding:.15rem .15rem;transition:color .25s;
+}
+.lang-switch a:hover,.lang-switch a[aria-current]{color:var(--ink);font-weight:600}
+.lang-switch .sep{color:var(--line)}
 @media(max-width:720px){
   .nav{flex-direction:column;gap:.7rem}
   nav.links{gap:1.2rem;flex-wrap:wrap;justify-content:center}
