@@ -27,10 +27,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sun);outline-offset
 /* ---------- header ---------- */
 header{
   position:sticky;top:0;z-index:10;
-  background:color-mix(in srgb, var(--paper) 90%, transparent);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);
+  background-color:#8A8985;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+  border-bottom:1px solid rgba(0,0,0,0.14);
 }
+header .wordmark{color:#1C2620}
+header .wordmark span{color:#234234}
+header nav.links a{color:#3E4A42}
+header nav.links a:hover,header nav.links a:focus-visible,header nav.links a[aria-current]{color:#1C2620}
+header .lang-switch a{color:#46544C}
+header .lang-switch a:hover,header .lang-switch a[aria-current]{color:#1C2620}
+header .lang-switch .sep{color:rgba(0,0,0,0.25)}
 .nav{
   width:100%;margin:0;
   display:flex;align-items:center;justify-content:space-between;
