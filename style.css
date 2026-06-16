@@ -152,6 +152,7 @@ section{border-top:1px solid var(--line)}
   border:1px solid var(--ink);padding:.75rem 1.5rem;border-radius:999px;
   transition:all .25s;background:transparent;
 }
+button.btn{font-family:inherit;line-height:1.65;cursor:pointer;-webkit-appearance:none;appearance:none}
 .btn:hover,.btn:focus-visible{background:var(--ink);color:var(--paper)}
 .btn.solid{background:var(--ink);color:var(--paper)}
 .btn.solid:hover,.btn.solid:focus-visible{background:var(--moss);border-color:var(--moss)}

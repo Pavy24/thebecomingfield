@@ -196,7 +196,7 @@
       If something in you is drawn toward stillness, honesty, and gentle discovery, you are welcome here.</p>
       <p class="signature">This is The Becoming Field</p>
       <!-- PLACEHOLDER: replace mailto with a booking link if you prefer -->
-      <a class="btn solid" href="mailto:flavius.pavalean@yahoo.com?subject=Soul%20Recharge%20session" style="margin-top:2.4rem">Book a session</a>
+      <button class="btn solid" data-cal-link="thebecomingfield/soul-recharge" data-cal-config='{"theme":"light"}' style="margin-top:2.4rem;cursor:pointer;font-family:inherit">Book a session</button>
     </div>
   </section>
 
@@ -206,7 +206,6 @@
   <div class="foot">
     <img class="logo" src="images/logo.png" alt="The Becoming Field logo">
     <div class="contact">
-      <a href="tel:+41779436696">+41 77 943 66 96</a><br>
       <a href="mailto:flavius.pavalean@yahoo.com">flavius.pavalean@yahoo.com</a><br>
       <!-- PLACEHOLDER: replace # with your Meetup / Luma events link -->
       <a href="https://www.meetup.com/blooming-soul-journeys-freedom-presence-inner-peace/" target="_blank" rel="noopener">Events</a>
@@ -251,6 +250,12 @@
 })();
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#5C7256"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 
 </body>

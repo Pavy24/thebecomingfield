@@ -107,6 +107,17 @@
     </div>
   </section>
 
+  <section>
+    <div class="section-inner reveal" style="text-align:center">
+      <p class="section-kicker" style="color:var(--moss)">When you're ready</p>
+      <h2 class="section-title" style="margin:0 auto 1.2rem">Want to talk it through?</h2>
+      <div class="prose" style="margin:0 auto">
+        <p>If something stirred while you reflected, we can meet for a free thirty-minute call &mdash; an unhurried conversation to see what wants attention and whether working together feels right.</p>
+      </div>
+      <button class="btn solid" data-cal-link="thebecomingfield/discovery-call" data-cal-config='{"theme":"light"}' style="margin-top:1.8rem;cursor:pointer;font-family:inherit">Book a free 30-min call</button>
+    </div>
+  </section>
+
   <section class="closing">
     <div class="section-inner reveal">
       <p class="invite">Start with one sincere sentence.<br>
@@ -121,7 +132,6 @@
   <div class="foot">
     <img class="logo" src="images/logo.png" alt="The Becoming Field logo">
     <div class="contact">
-      <a href="tel:+41779436696">+41 77 943 66 96</a><br>
       <a href="mailto:flavius.pavalean@yahoo.com">flavius.pavalean@yahoo.com</a><br>
       <a href="https://www.meetup.com/blooming-soul-journeys-freedom-presence-inner-peace/" target="_blank" rel="noopener">Events</a>
     </div>
@@ -132,6 +142,12 @@
 <script>
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#5C7256"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 
 </body>
