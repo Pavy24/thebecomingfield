@@ -40,7 +40,6 @@
     <p class="eyebrow">Gratuit &middot; aproximativ 15 minute</p>
     <h1>Energy Audit</h1>
     <p class="sub">Dincolo de performanță — o auto-explorare ghidată care îți arată unde îți merge energia și unde așteaptă, în liniște, să se întoarcă.</p>
-    <a class="btn solid" href="https://d785a059.sibforms.com/serve/MUIFALsXmXvNg3GPzRK768Z1Mg1Bel6Q0eoqj3Tgk3yDVFrB8D3ppq9pN-nVCO3o1v8GFDnxFX9WJRMaS-gfx8xxgfs4QNrf5VgsbyydymyBDIcYw5FNFekVnZhIVcVRtYxjKhi8c3PRfsszKt5Tl-s22bPo_EpU-PYszU81Li38BhJjmlv2HmxPcsNGFFY2gOhLGkT7A-cu4Ee1LA==" target="_blank" rel="noopener" style="margin-top:1.8rem">Începe Energy Audit</a>
   </div>
 
   <section>
@@ -107,17 +106,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="section-inner reveal" style="text-align:center">
-      <p class="section-kicker" style="color:var(--moss)">Când ești pregătit</p>
-      <h2 class="section-title" style="margin:0 auto 1.2rem">Vrei să vorbim despre asta?</h2>
-      <div class="prose" style="margin:0 auto">
-        <p>Dacă ceva s-a mișcat în tine în timp ce ai reflectat, ne putem întâlni pentru un call gratuit de treizeci de minute &mdash; o conversație fără grabă, ca să vedem ce cere atenție și dacă simți că ți se potrivește să lucrăm împreună.</p>
-      </div>
-      <button class="btn solid" data-cal-link="thebecomingfield/discovery-call" data-cal-config='{"theme":"light"}' style="margin-top:1.8rem;cursor:pointer;font-family:inherit">Programează un call gratuit de 30 min</button>
-    </div>
-  </section>
-
   <section class="closing">
     <div class="section-inner reveal">
       <p class="invite">Începe cu o singură propoziție sinceră.<br>
@@ -142,12 +130,6 @@
 <script>
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", {origin:"https://cal.com"});
-Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#5C7256"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 
 </body>
