@@ -18,7 +18,8 @@
 <header>
   <div class="nav">
     <a class="wordmark" href="index.html">The Becoming <span>Field</span></a>
-    <div class="nav-right">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    <div class="nav-right" id="nav-menu">
       <nav class="links" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="meet-flavius.html" aria-current="page">Meet Flavius</a>
@@ -49,9 +50,9 @@
           <img src="images/flavius-desk.jpg" alt="Flavius sitting at his desk, smiling">
         </div>
         <div>
-          <h2 class="section-title">Today, I hold spaces where discovery, release, and becoming can happen gently</h2>
+          <h2 class="section-title">Today, I hold spaces where discovery, release and becoming can happen gently</h2>
           <div class="prose">
-            <p>Presence, stillness, and subtle energetic support guide the work — not fixing, forcing, or offering answers.</p>
+            <p>Presence, stillness and subtle energetic support guide the work, not fixing, forcing or offering answers.</p>
             <p>What matters most is the space we create together, where your own intelligence can unfold naturally.</p>
           </div>
         </div>
@@ -68,8 +69,8 @@
         <div>
           <h2 class="section-title">I didn't arrive here through a straight or easy path</h2>
           <div class="prose">
-            <p>A few years ago, I reached a point where life felt unbearable. I was deeply exhausted, disconnected, and questioning whether life itself was worth continuing.</p>
-            <p>At that lowest point, I began writing down the questions I could no longer avoid — about meaning, identity, and what it truly means to live.</p>
+            <p>A few years ago, I reached a point where life felt unbearable. I was deeply exhausted, disconnected and questioning whether life itself was worth continuing.</p>
+            <p>At that lowest point, I began writing down the questions I could no longer avoid, about meaning, identity and what it truly means to live.</p>
             <p>That moment didn't lead to answers. It led to listening.</p>
           </div>
         </div>
@@ -84,9 +85,9 @@
         <ul>
           <li>I entered therapy and stayed with it for over two years.</li>
           <li>I discovered meditation in a Buddhist center and learned how to sit with what is present rather than escape it.</li>
-          <li>I walked the Camino, slowed my pace, and allowed silence to reshape me.</li>
+          <li>I walked the Camino, slowed my pace and allowed silence to reshape me.</li>
           <li>Vipassana deepened my relationship with awareness and honesty.</li>
-          <li>Along the way, I explored family constellations, shamanic work, ayahuasca ceremonies, and other ways of meeting what lives beneath the surface.</li>
+          <li>Along the way, I explored family constellations, shamanic work, ayahuasca ceremonies and other ways of meeting what lives beneath the surface.</li>
         </ul>
       </div>
     </div>
@@ -103,7 +104,7 @@
           <div class="prose">
             <p>… not as a solution, but as a confirmation.</p>
             <p>Through Reiki, I experienced how much transformation happens simply when a safe, attuned space is present.</p>
-            <p>I completed my second-level certification and began practicing — not to heal others, but to hold a field where healing can unfold naturally.</p>
+            <p>I completed my second-level certification and began practicing, not to heal others, but to hold a field where healing can unfold naturally.</p>
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@
           <h2 class="section-title">Presence comes first</h2>
           <div class="prose">
             <p>The work I offer is based on the space we create together.</p>
-            <p>The tools — meditation, parts work, Reiki, or other forms of inquiry — are supports, not solutions. They serve the process, not the other way around.</p>
+            <p>The tools — meditation, parts work, Reiki or other forms of inquiry — are supports, not solutions. They serve the process, not the other way around.</p>
             <p>My role is not to guide you toward answers or fix what feels broken. It is to accompany you quietly, with steadiness and respect, while you discover what is already true for you.</p>
             <p><em>If you are here, you are likely already on your way. I simply walk with you for a part of the path.</em></p>
           </div>
@@ -132,7 +133,7 @@
   <section class="closing">
     <div class="section-inner reveal">
       <p class="invite">You don't need to be ready. You don't need to know what you're looking for.<br>
-      If something in you is drawn toward stillness, honesty, and gentle discovery, you are welcome here.</p>
+      If something in you is drawn toward stillness, honesty and gentle discovery, you are welcome here.</p>
       <p class="signature">This is The Becoming Field</p>
       <a class="btn solid" href="soul-recharge.html" style="margin-top:2.4rem">Explore Soul Recharge</a>
     </div>
@@ -157,5 +158,16 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'), m=document.getElementById('nav-menu');
+  if(t&&m){t.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+  }
+})();
+</script>
 </body>
 </html>

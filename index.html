@@ -18,7 +18,8 @@
 <header>
   <div class="nav">
     <a class="wordmark" href="index.html">The Becoming <span>Field</span></a>
-    <div class="nav-right">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    <div class="nav-right" id="nav-menu">
       <nav class="links" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
       <a href="meet-flavius.html">Meet Flavius</a>
@@ -39,7 +40,7 @@
 
   <div class="hero">
     <p class="eyebrow">A quiet, grounded space</p>
-    <h1>Holding space for <em>self&#8209;discovery</em>, <em>release</em>, and <em>becoming</em></h1>
+    <h1>Holding space for <em>self&#8209;discovery</em>, <em>release</em> and <em>becoming</em></h1>
   </div>
 
   <section>
@@ -53,9 +54,9 @@
           <h2 class="section-title">This is Flavius.</h2>
           <div class="prose">
             <p>I created <strong>The Becoming Field</strong> as a quiet, grounded space where transformation unfolds gently.</p>
-            <p>Here, you are met as you are, held with care, and given space to discover and explore.</p>
-            <p>Whether you carry restlessness, inner conflict, or simply a longing for alignment, you don't have to push.</p>
-            <p>You are met, and becoming happens.</p>
+            <p>Here, you are met as you are, held with care and given space to discover and explore.</p>
+            <p>Whether you carry restlessness, inner conflict or simply a longing for alignment, you don't have to push.</p>
+            <p>You are met and becoming happens.</p>
           </div>
           <a class="btn" href="meet-flavius.html">Meet Flavius</a>
         </div>
@@ -73,8 +74,8 @@
           <p class="section-kicker">The approach</p>
           <h2 class="section-title">How we can work together</h2>
           <div class="prose">
-            <p>What I offer is experiential, embodied, and relational. It happens through <strong>direct experience</strong>, not concepts or techniques to apply later.</p>
-            <p>It integrates <strong>stillness</strong>, <strong>awareness</strong>, and <strong>subtle energetic support</strong> to meet you exactly where you are. It's responding to what is alive in the moment, and allowing understanding and release to arise naturally, at your own pace.</p>
+            <p>What I offer is experiential, embodied and relational. It happens through <strong>direct experience</strong>, not concepts or techniques to apply later.</p>
+            <p>It integrates <strong>stillness</strong>, <strong>awareness</strong> and <strong>subtle energetic support</strong> to meet you exactly where you are. It's responding to what is alive in the moment and allowing understanding and release to arise naturally, at your own pace.</p>
           </div>
         </div>
       </div>
@@ -92,7 +93,7 @@
           <div class="offer-body">
             <p class="meta">Individual Reiki sessions</p>
             <h3>Soul Recharge</h3>
-            <p>Individual Reiki sessions where we work with <strong>presence</strong>, <strong>energy</strong>, and <strong>deep listening</strong>. Sessions are guided by what is alive in the moment, not by a fixed protocol.</p>
+            <p>Individual Reiki sessions where we work with <strong>presence</strong>, <strong>energy</strong> and <strong>deep listening</strong>. Sessions are guided by what is alive in the moment, not by a fixed protocol.</p>
           </div>
           <a class="btn" href="soul-recharge.html">Learn more</a>
         </div>
@@ -102,7 +103,7 @@
           <div class="offer-body">
             <p class="meta">Small group spaces</p>
             <h3>The Becoming Circle</h3>
-            <p>Small group spaces where a journey inspired by <strong>meditation</strong> and <strong>inner parts work</strong> is coming together with <strong>Reiki</strong>. The group field allows <strong>something unique to emerge</strong> — a shared holding that deepens individual and collective becoming.</p>
+            <p>Small group spaces where a journey inspired by <strong>meditation</strong> and <strong>inner parts work</strong> is coming together with <strong>Reiki</strong>. The group field allows <strong>something unique to emerge</strong>, a shared holding that deepens individual and collective becoming.</p>
           </div>
           <a class="btn" href="becoming-circle.html">Learn more</a>
         </div>
@@ -115,7 +116,7 @@
       <p class="section-kicker" style="color:var(--moss)">A simple first step</p>
       <h2 class="section-title" style="margin:0 auto 1.2rem">Curious where your energy goes?</h2>
       <div class="prose" style="margin:0 auto">
-        <p>The Energy Audit is a free, fifteen-minute self-inquiry that maps where your energy leaks across four areas of life &mdash; and where it is quietly asking to return.</p>
+        <p>The Energy Audit is a free, fifteen-minute self-inquiry that maps where your energy leaks across four areas of life and where it is quietly asking to return.</p>
       </div>
       <a class="btn" href="energy-audit.html" style="margin-top:1.8rem">Discover the Energy Audit</a>
     </div>
@@ -124,7 +125,7 @@
   <section class="closing">
     <div class="section-inner reveal">
       <p class="invite">You don't need to be ready. You don't need to know what you're looking for.<br>
-      If something in you is drawn toward stillness, honesty, and gentle discovery, you are welcome here.</p>
+      If something in you is drawn toward stillness, honesty and gentle discovery, you are welcome here.</p>
       <p class="signature">This is The Becoming Field</p>
     </div>
   </section>
@@ -148,5 +149,16 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'), m=document.getElementById('nav-menu');
+  if(t&&m){t.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+  }
+})();
+</script>
 </body>
 </html>

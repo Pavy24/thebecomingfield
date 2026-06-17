@@ -18,7 +18,8 @@
 <header>
   <div class="nav">
     <a class="wordmark" href="index.html">The Becoming <span>Field</span></a>
-    <div class="nav-right">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    <div class="nav-right" id="nav-menu">
       <nav class="links" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="meet-flavius.html">Meet Flavius</a>
@@ -40,7 +41,7 @@
   <div class="page-hero">
     <p class="eyebrow">Small group spaces in nature</p>
     <h1>The Becoming Circle</h1>
-    <p class="sub">An outdoor practice where meditation, inner parts work, somatic work, and Reiki come together — held in the quiet of nature.</p>
+    <p class="sub">An outdoor practice where meditation, inner parts work, somatic work and Reiki come together, held in the quiet of nature.</p>
   </div>
 
   <section>
@@ -53,8 +54,8 @@
           <p class="section-kicker">What it is</p>
           <h2 class="section-title">A shared field, held in nature</h2>
           <div class="prose">
-            <p>The Becoming Circle is a small group space — a place where a journey inspired by <strong>meditation</strong> and <strong>inner parts work</strong> comes together with <strong>Reiki</strong>.</p>
-            <p>We gather outdoors, in nature. Being in a natural setting softens the mind and opens what tends to stay closed indoors. The group field allows <strong>something unique to emerge</strong> — a shared holding that deepens both individual and collective becoming.</p>
+            <p>The Becoming Circle is a small group space, a place where a journey inspired by <strong>meditation</strong> and <strong>inner parts work</strong> comes together with <strong>Reiki</strong>.</p>
+            <p>We gather outdoors, in nature. Being in a natural setting softens the mind and opens what tends to stay closed indoors. The group field allows <strong>something unique to emerge</strong>, a shared holding that deepens both individual and collective becoming.</p>
             <p>You don't need any prior experience. You only need a willingness to slow down and meet what is alive in you, at your own pace.</p>
           </div>
         </div>
@@ -69,19 +70,19 @@
       <div class="cards2" style="grid-template-columns:repeat(2,1fr)">
         <div class="icard">
           <h3>Connection</h3>
-          <p>We arrive, settle the nervous system through breath, and come into contact — with the ground, the body, the group, and the living space around us.</p>
+          <p>We arrive, settle the nervous system through breath and come into contact with the ground, the body, the group and the living space around us.</p>
         </div>
         <div class="icard">
           <h3>Awareness</h3>
-          <p>Through slow movement and gentle attention, we let the body show us where it holds — listening rather than analysing, noticing what is here.</p>
+          <p>Through slow movement and gentle attention, we let the body show us where it holds, listening rather than analysing, noticing what is here.</p>
         </div>
         <div class="icard">
           <h3>Release</h3>
-          <p>We meet the tension we find with care — pendulation, parts dialogue, and Reiki — allowing what is ready to soften and move.</p>
+          <p>We meet the tension we find with care, pendulation, parts dialogue and Reiki, allowing what is ready to soften and move.</p>
         </div>
         <div class="icard">
           <h3>Integration</h3>
-          <p>Solo time in nature, optional sharing, and a collective closing — so that what opened has space to settle and become yours.</p>
+          <p>Solo time in nature, optional sharing and a collective closing, so that what opened has space to settle and become yours.</p>
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@
           <p class="section-kicker">How a session unfolds</p>
           <h2 class="section-title">A gentle, unhurried flow</h2>
           <div class="prose">
-            <p>Each gathering moves through a natural arc — roughly ninety minutes, with long pauses and no pressure to perform:</p>
+            <p>Each gathering moves through a natural arc, roughly ninety minutes, with long pauses and no pressure to perform:</p>
             <ul>
               <li><strong>Settling</strong> &mdash; breathwork to arrive and calm the nervous system</li>
               <li><strong>Intention</strong> &mdash; an energy practice to set what you bring and what you're ready to release</li>
@@ -116,7 +117,7 @@
 
   <section class="band">
     <div class="section-inner reveal">
-      <p class="big">You started under siege. You went through what was there. And you always arrived in the same place &mdash; a <strong>peaceful, supportive, reconciled emptiness</strong>. From that space you can move forward.</p>
+      <p class="big">You started under siege. You went through what was there. And you always arrived in the same place, a <strong>peaceful, supportive, reconciled emptiness</strong>. From that space you can move forward.</p>
     </div>
   </section>
 
@@ -126,7 +127,7 @@
       <h2 class="section-title" style="margin:0 auto 1.2rem">Where &amp; when</h2>
       <div class="prose" style="margin:0 auto">
         <p>We meet in nature, in a quiet outdoor setting with room to spread out and be held by the space around us.</p>
-        <p>Group size is kept small, so the field stays intimate and safe. The exact meeting point, timing, and what to bring are shared with you after you join &mdash; so we can hold the space with care and keep it for those who are truly coming.</p>
+        <p>Group size is kept small, so the field stays intimate and safe. The exact meeting point, timing and what to bring are shared with you after you join, so we can hold the space with care and keep it for those who are truly coming.</p>
       </div>
       <!-- PLACEHOLDER: replace # with your Meetup group / event link -->
       <a class="btn solid" href="https://www.meetup.com/blooming-soul-journeys-freedom-presence-inner-peace/" target="_blank" rel="noopener" style="margin-top:2.2rem">Join us on Meetup</a>
@@ -136,7 +137,7 @@
   <section class="closing">
     <div class="section-inner reveal">
       <p class="invite">You don't need to be ready. You don't need to know what you're looking for.<br>
-      If something in you is drawn toward stillness, honesty, and gentle discovery, you are welcome here.</p>
+      If something in you is drawn toward stillness, honesty and gentle discovery, you are welcome here.</p>
       <p class="signature">This is The Becoming Field</p>
     </div>
   </section>
@@ -160,5 +161,16 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'), m=document.getElementById('nav-menu');
+  if(t&&m){t.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+  }
+})();
+</script>
 </body>
 </html>

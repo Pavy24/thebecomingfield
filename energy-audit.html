@@ -18,7 +18,8 @@
 <header>
   <div class="nav">
     <a class="wordmark" href="index.html">The Becoming <span>Field</span></a>
-    <div class="nav-right">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    <div class="nav-right" id="nav-menu">
       <nav class="links" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="meet-flavius.html">Meet Flavius</a>
@@ -39,7 +40,7 @@
   <div class="page-hero">
     <p class="eyebrow">Free &middot; about 15 minutes</p>
     <h1>The Energy Audit</h1>
-    <p class="sub">Behind the performance &mdash; a guided self-inquiry that shows you where your energy goes, and where it is quietly asking to return.</p>
+    <p class="sub">Behind the performance, a guided self-inquiry that shows you where your energy goes and where it is quietly asking to return.</p>
   </div>
 
   <section>
@@ -52,9 +53,9 @@
           <p class="section-kicker">What it is</p>
           <h2 class="section-title">A quiet look beneath the surface</h2>
           <div class="prose">
-            <p>So much of our energy lives in the upper field &mdash; the situations, the deadlines, the relationships, the constant effort of holding it all together. When something unsettles us, we tend to look outward for the cause.</p>
-            <p>The Energy Audit gently turns that around. It rests on a simple premise: <strong>what you feel begins in you</strong>. Rather than fixing the outside, it helps you notice where your energy leaks, where you brace, and where a part of you is waiting to be met.</p>
-            <p>It is not a diagnosis or a label. It is a mirror &mdash; an honest, unhurried picture of your inner landscape right now.</p>
+            <p>So much of our energy lives in the upper field, the situations, the deadlines, the relationships, the constant effort of holding it all together. When something unsettles us, we tend to look outward for the cause.</p>
+            <p>The Energy Audit gently turns that around. It rests on a simple premise: <strong>what you feel begins in you</strong>. Rather than fixing the outside, it helps you notice where your energy leaks, where you brace and where a part of you is waiting to be met.</p>
+            <p>It is not a diagnosis or a label. It is a mirror, an honest, unhurried picture of your inner landscape right now.</p>
           </div>
         </div>
       </div>
@@ -68,19 +69,19 @@
       <div class="cards2" style="grid-template-columns:repeat(2,1fr)">
         <div class="icard">
           <h3>Identity &amp; value</h3>
-          <p>How you see your own worth &mdash; whether it rests in you, or depends on what you do and how others respond.</p>
+          <p>How you see your own worth, whether it rests in you or depends on what you do and how others respond.</p>
         </div>
         <div class="icard">
           <h3>Relationship with others</h3>
-          <p>How you meet the people around you &mdash; where you give too much, hold back, or lose yourself in connection.</p>
+          <p>How you meet the people around you, where you give too much, hold back or lose yourself in connection.</p>
         </div>
         <div class="icard">
           <h3>Relationship with life</h3>
-          <p>How you meet what life brings &mdash; uncertainty, change, the things you cannot control &mdash; and where it tightens you.</p>
+          <p>How you meet what life brings, uncertainty, change, the things you cannot control and where it tightens you.</p>
         </div>
         <div class="icard">
           <h3>Relationship with self</h3>
-          <p>How you treat yourself underneath it all &mdash; the inner tone, the demands, the care or its absence.</p>
+          <p>How you treat yourself underneath it all, the inner tone, the demands, the care or its absence.</p>
         </div>
       </div>
     </div>
@@ -102,14 +103,14 @@
 
   <section class="band">
     <div class="section-inner reveal">
-      <p class="big">The work begins with one short, sincere sentence about what is true right now &mdash; <strong>the moment attention stops flowing outward and begins to flow home.</strong></p>
+      <p class="big">The work begins with one short, sincere sentence about what is true right now: <strong>the moment attention stops flowing outward and begins to flow home.</strong></p>
     </div>
   </section>
 
   <section class="closing">
     <div class="section-inner reveal">
       <p class="invite">Start with one sincere sentence.<br>
-      Fifteen quiet minutes, four areas of your life, and a clear picture of where your energy wants to come home.</p>
+      Fifteen quiet minutes, four areas of your life and a clear picture of where your energy wants to come home.</p>
       <a class="btn solid" href="https://d785a059.sibforms.com/serve/MUIFANahOFo-FZhwCP9S6s1D0K-j9UwlNJqaqPKo3DSaQFM-Qt6YKs6YofgMwwHHCjcsI5C_orEhwTiH4Oz0pcb_zolB5oG13ujh6oZ8rd4WldRLSjhgdATmHqd50Ci20C5pLHwonRz5inlTG1YTjiOt1YPU4xFvgY1G3jQUTj2DNsAbMNC53uNFJ44XPp7VqZy99dntKNvKVvBz-w==" target="_blank" rel="noopener" style="margin-top:2.2rem">Take the Energy Audit</a>
     </div>
   </section>
@@ -132,5 +133,16 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'), m=document.getElementById('nav-menu');
+  if(t&&m){t.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+  }
+})();
+</script>
 </body>
 </html>
