@@ -23,7 +23,7 @@
       <nav class="links" aria-label="Principal">
       <a href="index.html">Acasă</a>
       <a href="despre-flavius.html" aria-current="page">Despre Flavius</a>
-      <a href="energy-audit.html">Energy Audit</a>
+      <a href="energy-audit.html">Life Energy Audit</a>
       <a href="back-to-essence.html">Back to Essence</a>
       <a href="soul-recharge.html">Soul Recharge</a>
       <a href="cercul-becoming.html">Cercul Becoming</a>
@@ -135,7 +135,7 @@
       <p class="invite">Nu trebuie să fii pregătit. Nu trebuie să știi ce cauți.<br>
       Dacă ceva în tine e atras de liniște, sinceritate și descoperire blândă, ești binevenit aici.</p>
       <p class="signature">Acesta este The Becoming Field</p>
-      <a class="btn solid" href="soul-recharge.html" style="margin-top:2.4rem">Explorează Soul Recharge</a>
+      <button class="btn solid" data-cal-link="thebecomingfield/discovery-call" data-cal-config='{"theme":"light"}' style="margin-top:2.4rem;cursor:pointer;font-family:inherit">Programează un call gratuit de descoperire</button>
     </div>
   </section>
 
@@ -167,6 +167,11 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});
   }
 })();
+</script>
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#5C7256"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 </body>
 </html>
