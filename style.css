@@ -131,7 +131,7 @@ h1 em{font-style:italic;color:var(--moss)}
 
 /* call-to-action button with subtle breathing motion */
 .btn-cta{
-  display:inline-block;margin-top:2.4rem;
+  display:inline-block;margin-top:3.2rem;
   font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;
   text-decoration:none;color:var(--paper);background:var(--moss);
   padding:1rem 2.4rem;border-radius:999px;border:none;cursor:pointer;
@@ -155,6 +155,11 @@ section{border-top:1px solid var(--line)}
   max-width:var(--maxw);margin:0 auto;
   padding:5rem 1.5rem;
 }
+/* full-width, centered text variant */
+.section-inner.wide{max-width:none;text-align:center}
+.section-inner.wide .section-kicker,
+.section-inner.wide .section-title{text-align:center}
+.section-inner.wide .prose{max-width:46em;margin-left:auto;margin-right:auto;text-align:center}
 .section-kicker{
   font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
   color:var(--moss);margin-bottom:1rem;
@@ -215,13 +220,13 @@ button.btn{font-family:inherit;line-height:1.65;cursor:pointer;-webkit-appearanc
 .offer{background:var(--paper);padding:0 0 2.4rem;display:flex;flex-direction:column}
 .offer:hover{background:#EDECE4}
 .offer img{width:100%;aspect-ratio:3/2;object-fit:cover;border-bottom:1px solid var(--line)}
-.offer img.contain{object-fit:contain;background:#E9E8E0;aspect-ratio:4/3}
+.offer img.contain{object-fit:contain;background:#E9E8E0;aspect-ratio:3/4}
 .offer .offer-body{padding:2rem 2.2rem 0}
 .offer h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.4rem;margin-bottom:.4rem}
 .offer .meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);margin-bottom:.9rem}
 .offer p{font-size:.96rem;color:#3A463F}
 .offer .btn{margin:1.6rem 2.2rem 0;align-self:flex-start}
-@media(max-width:880px){.offers-3{grid-template-columns:1fr}}
+@media(max-width:680px){.offers-3{grid-template-columns:1fr}}
 @media(max-width:760px){.offers{grid-template-columns:1fr}}
 
 /* quiet full-width quote band */
